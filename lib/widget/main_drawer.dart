@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:state/screen/basic/state_basic.dart';
 
+import '../screen/hook/hook_screen.dart';
 import '../screen/inherit/inherited_widget.dart';
 import '../screen/inherit_model/inherited_model_screen.dart';
 import '../screen/inherited_notifier/notifier.dart';
@@ -54,6 +55,13 @@ class MainDrawer extends StatelessWidget {
           onTap: () {
             Navigator.of(context).push(MaterialPageRoute(
                 builder: (context) => const ProviderScreen2()));
+          },
+        ),
+        ListTile(
+          title: const Text('Hook'),
+          onTap: () {
+            Navigator.of(context).push(
+                MaterialPageRoute(builder: (context) => const HookScreen()));
           },
         )
       ]),
