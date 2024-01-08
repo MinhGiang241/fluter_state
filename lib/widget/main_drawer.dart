@@ -5,6 +5,7 @@ import '../screen/inherit/inherited_widget.dart';
 import '../screen/inherit_model/inherited_model_screen.dart';
 import '../screen/inherited_notifier/notifier.dart';
 import '../screen/provider/provider.dart';
+import '../screen/provider2/provider_screen2.dart';
 
 class MainDrawer extends StatelessWidget {
   const MainDrawer({super.key});
@@ -46,6 +47,13 @@ class MainDrawer extends StatelessWidget {
           onTap: () {
             Navigator.of(context).push(MaterialPageRoute(
                 builder: (context) => const ProviderScreen()));
+          },
+        ),
+        ListTile(
+          title: const Text('Provider2'),
+          onTap: () {
+            Navigator.of(context).push(MaterialPageRoute(
+                builder: (context) => const ProviderScreen2()));
           },
         )
       ]),
