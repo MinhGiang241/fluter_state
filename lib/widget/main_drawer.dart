@@ -10,6 +10,7 @@ import '../screen/inherit_model/inherited_model_screen.dart';
 import '../screen/inherited_notifier/notifier.dart';
 import '../screen/provider/provider.dart';
 import '../screen/provider2/provider_screen2.dart';
+import '../screen/redux/redux_screen.dart';
 
 class MainDrawer extends StatelessWidget {
   const MainDrawer({super.key});
@@ -86,6 +87,13 @@ class MainDrawer extends StatelessWidget {
           onTap: () {
             Navigator.of(context).push(MaterialPageRoute(
                 builder: (context) => const HookImageScreen()));
+          },
+        ),
+        ListTile(
+          title: const Text('Redux'),
+          onTap: () {
+            Navigator.of(context).push(
+                MaterialPageRoute(builder: (context) => const ReduxScreen()));
           },
         )
       ]),

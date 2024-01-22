@@ -38,6 +38,8 @@ dependencies:
   uuid: ^4.2.2
   provider: ^6.1.1
   flutter_hooks: ^0.20.4
+  redux: ^5.0.0
+  flutter_redux: ^0.10.0
 
 dev_dependencies:
   flutter_test:
