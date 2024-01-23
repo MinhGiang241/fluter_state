@@ -17,9 +17,9 @@ class State {
       case ItemFilter.all:
         return items;
       case ItemFilter.shortTexts:
-        return items.where((element) => element.length >= 10);
+        return items.where((element) => element.length <= 10);
       case ItemFilter.longTexts:
-        return items.where((element) => element.length < 10);
+        return items.where((element) => element.length > 10);
       default:
         return [];
     }
@@ -152,7 +152,14 @@ class ReduxScreen extends hooks.HookWidget {
               StoreConnector<State, Iterable<String>>(
                 converter: (store) => store.state.filterredItems,
                 builder: (context, items) {
-                  return Container();
+                  return Expanded(
+                      child: ListView.builder(
+                    itemCount: items.length,
+                    itemBuilder: (cocntext, index) {
+                      final item = items.elementAt(index);
+                      return ListTile(title: Text(item));
+                    },
+                  ));
                 },
               )
             ],
