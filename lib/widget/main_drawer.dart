@@ -8,9 +8,11 @@ import '../screen/hook_scroll/hook_scroll_screen.dart';
 import '../screen/inherit/inherited_widget.dart';
 import '../screen/inherit_model/inherited_model_screen.dart';
 import '../screen/inherited_notifier/notifier.dart';
+import '../screen/lotie/lotie_screen.dart';
 import '../screen/provider/provider.dart';
 import '../screen/provider2/provider_screen2.dart';
 import '../screen/redux/redux_screen.dart';
+import '../screen/redux2/redux2_screen.dart';
 
 class MainDrawer extends StatelessWidget {
   const MainDrawer({super.key});
@@ -95,7 +97,21 @@ class MainDrawer extends StatelessWidget {
             Navigator.of(context).push(
                 MaterialPageRoute(builder: (context) => const ReduxScreen()));
           },
-        )
+        ),
+        ListTile(
+          title: const Text('Redux2'),
+          onTap: () {
+            Navigator.of(context).push(
+                MaterialPageRoute(builder: (context) => const Redux2Screen()));
+          },
+        ),
+        ListTile(
+          title: const Text('Lotie'),
+          onTap: () {
+            Navigator.of(context).push(
+                MaterialPageRoute(builder: (context) => const LotieScreen()));
+          },
+        ),
       ]),
     );
   }
